@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace NewYearPresent
 {
-    class Program
+    enum SweetSize
     {
-        static void Main(string[] args)
-        {
-        }
+        Small = 5,
+        Average = 10,
+        Big = 15
     }
 }
