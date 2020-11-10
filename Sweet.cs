@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NewYearPresent
 {
@@ -10,10 +6,13 @@ namespace NewYearPresent
     {
         public int Weight { get; private set; }
         public abstract double SugarPercent { get; }
+        public abstract String Name { get; }
+
         public Sweet(int weight)
         {
             Weight = weight;
         }
-        public Sweet(SweetSize weight) : this((int)weight) { }
+
+        public Sweet(SweetSize weight = SweetSize.Average) : this((int)weight) { }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NewYearPresent
 {
@@ -24,7 +20,12 @@ namespace NewYearPresent
 
         public double GetSugarPercent()
         {
-            return (Filling.Weight * Filling.SugarPercent + Cover.Weight * Cover.SugarPercent) / GetWeight();
+            return (Filling.Weight * Filling.SugarPercent + Cover.Weight * Cover.SugarPercent) / GetWeight() * 100;
+        }
+
+        public override String ToString()
+        {
+            return $"Candy with {Filling.Name} in {Cover.Name} (sugar percent: {GetSugarPercent()}%, weight: {GetWeight()}g)";
         }
     }
 }
